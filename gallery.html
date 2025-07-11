@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Ghazal</title>
+  <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="picture" href="picture/Ghazal logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    .gallery-section {
+      padding: 60px 10%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .gallery-section h1 {
+      font-family: 'ArtNuvo', 'UnifrakturCook', cursive;
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+
+    .tools-slider {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .tools-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+      gap: 40px;
+    }
+
+    .tool-item {
+      flex: 0 0 auto;
+      width: 150px;
+      text-align: center;
+    }
+
+    .tool-item img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .tool-name {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .main-slider {
+      margin-top: 60px;
+      max-width: 800px;
+      margin-inline: auto;
+      position: relative;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+
+    .main-slide {
+      display: none;
+      width: auto;
+      max-width: 100%;
+      max-height: 500px;
+      height: auto;
+      object-fit: contain; /* ✅ elak potong gambar */
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+
+    .main-slide.active {
+      display: block;
+    }
+
+    video.gallery-video {
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="picture/Ghazal logo.png" alt="Ghazal Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="history.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="performance.html">Performance</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <h1>Ghazal Tools</h1>
+      <div class="tools-slider">
+        <div class="tools-track">
+          <div class="tool-item">
+            <img src="picture/gaambus.png" alt="Tool 1">
+            <div class="tool-name">Gambus</div>
+          </div>
+          <div class="tool-item">
+            <img src="picture/tabla.png" alt="Tool 2">
+            <div class="tool-name">Tabla</div>
+          </div>
+          <div class="tool-item">
+            <img src="picture/tambourin.png" alt="Tool 3">
+            <div class="tool-name">Tambourin</div>
+          </div>
+          <div class="tool-item">
+            <img src="picture/peti harmonian.png" alt="Tool 4">
+            <div class="tool-name">Peti Harmonia</div>
+          </div>
+          <div class="tool-item">
+            <img src="picture/marakas.png" alt="Tool 5">
+            <div class="tool-name">Marakas</div>
+          </div>
+          <!-- Repeat for looping effect -->
+          <div class="tool-item">
+            <img src="picture/gaambus.png" alt="Tool 1">
+            <div class="tool-name">Gambus</div>
+          </div>
+          <div class="tool-item">
+            <img src="picture/tabla.png" alt="Tool 2">
+            <div class="tool-name">Tabla</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-slider">
+        <img src="picture/PAKEJ RAMADAN DAN HARI RAYA Live Band GHAZAL Tradisi.JPG" class="main-slide active" id="slide1">
+        <img src="picture/Effort memang A Netizen Terkesima Lihat Hoondoo Nyanyi Ghazal Untuk Rabiah Di Big Stage.webp" class="main-slide" id="slide2">
+        <img src="picture/Kumpulan Ghazal Istana Budaya lakar sejarah di Vietnam.webp" class="main-slide" id="slide3">
+        <img src="picture/Variasi Alunan Muzik Tradisional Malaysia.jpg" class="main-slide" id="slide4">
+        <img src="picture/USHERA BAWAKAN UNSUR GHAZAL DALAM LAGU RAYA KEMBALI.jpg" class="main-slide" id="slide5">
+        <img src="picture/Traditional Malay Music.JPG" class="main-slide" id="slide6">
+        <img src="picture/Simfoni orkestra muzik keroncong, ghazal.jpg" class="main-slide" id="slide7">
+        <img src="picture/Persembahan Seni Muzik Ghazal di Kalangan Masyarakat Johor.png" class="main-slide" id="slide8">
+        <img src="picture/FESTIVAL GHAZAL MALAYSIA.png" class="main-slide" id="slide9">
+        <img src="picture/M'sian Philharmonic Orchestra set for magical evening of keroncong and ghazal.webp" class="main-slide" id="slide10">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2025 Ghazal. All rights reserved.</div>
+    <div>Contact us: ghazalwebarchive@gmail.com</div>
+  </footer>
+
+  <script>
+    // Auto Slide
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.main-slide');
+    setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>

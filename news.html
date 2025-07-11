@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Page Ghazal</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="picture" href="picture/Ghazal logo.png">
+  <style>
+    .news-section {
+      padding: 60px 10%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 400px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #f3e7dc;
+      color: #1a1a1a;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .flip-card-back .content {
+      flex-grow: 1;
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .flip-card-back .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .flip-card-back .buttons a {
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #4b2c20;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .flip-card-back .buttons a:hover {
+      background-color: #362116;
+    }
+
+    .drive-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 20px;
+}
+
+.drive-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.classic-button {
+  background-color: #4b2c20;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  font-family: 'Cinzel', serif;
+}
+
+.classic-button:hover {
+  background-color: #362116;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.news-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+   <div class="logo">
+        <img src="picture/Ghazal logo.png" alt="Ghazal Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="history.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="performance.html">Performance</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="drive-button-wrapper">
+  <a href="https://drive.google.com/drive/folders/1U3ThPJg5IwttYa6shGx9i9cXiAOhKL52?usp=sharing" target="_blank" class="classic-button">
+    📁 Conifer
+  </a>
+</div>
+  <main>
+    <section class="news-section">
+      <!-- Flip card template -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/Kumpulan Ghazal Istana Budaya lakar sejarah di Vietnam.webp" alt="News 1">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>Kumpulan Ghazal Istana Budaya lakar sejarah di Vietnam<br><br>
+              <strong>Archived Date:</strong> 5/10/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 38  seconds<br>
+              <strong>Size:</strong> 3.98 MB (5131756 bytes overall)<br>
+              <strong>Number of Files:</strong> 1 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              News coverage of Malaysia's Ghazal ensemble performing at the Vietnam International Travel Mart, showcasing local culture to a global audience.<br><br>
+              <strong>Notes:</strong><br>
+              All versions archived successfully; content layout and images preserved accurately.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1Cv9ABLQDWNXFbmIxNrOZ-1WX-ghAC9UO?usp=drive_link">HTrack</a>
+              <a href="https://drive.google.com/file/d/1GFLolCuAoX7I59Rksa9wKive5QLoARN_/view?usp=sharing">WARC File</a>
+              <a href="https://www.hmetro.com.my/rap/2023/01/923197/kumpulan-ghazal-istana-budaya-lakar-sejarah-di-vietnam">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat this flip-card 4 more times -->
+      <!-- Dummy cards -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/Symphonic Fusion The Cultural Symphony Of Keroncong & Ghazal.jpg">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>Symphonic Fusion: The Cultural Symphony Of Keroncong & Ghazal<br><br>
+              <strong>Archived Date:</strong> 5/10/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 1 minutes 14 seconds<br>
+              <strong>Size:</strong> 3.39 MB (4634511 bytes overall)<br>
+              <strong>Number of Files:</strong> 1 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              A report on a cultural symphony that blends the musical traditions of Keroncong and Ghazal, held in Malaysia to highlight heritage through orchestral expression.<br><br>
+          
+              <strong>Notes:</strong><br>
+              Website fully archived; media components and text displayed correctly.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1z13BEhksmWvTxC7yaJnb-X4xhn6h-2p2?usp=sharing">HTrack</a>
+              <a href="https://drive.google.com/file/d/1ryb96E3mFdkPs0U_Mz7aZetF1-5xc2oV/view?usp=drive_link">WARC File</a>
+              <a href="https://www.therakyatpost.com/news/malaysia/2024/02/03/symphonic-fusion-the-cultural-symphony-of-keroncong-ghazal/">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/A.jpg">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>“Effort memang A+!” – Netizen Terkesima Lihat Hoondoo Nyanyi Ghazal Untuk Rabiah Di Big Stage<br><br>
+              <strong>Archived Date:</strong> 2025-07-04<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 1 minutes 9 seconds<br>
+              <strong>Size:</strong> 9.91 MB (5971475 bytes overall)<br>
+              <strong>Number of Files:</strong> 1 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              Social media buzz over Korean contestant Hoondoo’s Ghazal performance on Malaysian reality show “Big Stage”, praised for cultural appreciation.<br><br>
+              <strong>Notes:</strong><br>
+              Archival successful across all platforms; embedded media and article remain accessible.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1eI5pAO3NfYBpL8MJZYDpOY2Man9pTgL9?usp=sharing">HTrack</a>
+              <a href="https://drive.google.com/file/d/1JO-yAdj07kBvZ5ccozxN9atId2YjNB6T/view?usp=drive_link">WARC File</a>
+              <a href="https://www.bharian.com.my/hiburan/selebriti/2024/01/1204407/simfoni-orkestra-muzik-keroncong-ghazal">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/M'sian Philharmonic Orchestra set for magical evening of keroncong and ghazal.webp">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>M'sian Philharmonic Orchestra set for magical evening of keroncong and ghazal<br><br>
+              <strong>Archived Date:</strong> 5/12/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 56 seconds<br>
+              <strong>Size:</strong> 5.22 MB (3971948 bytes overall)<br>
+              <strong>Number of Files:</strong> 3 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              Preview of a live orchestra concert celebrating the fusion of Keroncong and Ghazal at Dewan Filharmonik PETRONAS.<br><br>
+              <strong>Notes:</strong><br>
+              Successfully archived with all linked elements and preview content accessible.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1u-NSwTKRE_qitjzc-12-P-9m_IQwJODn?usp=sharing">HTrack</a>
+              <a href="https://drive.google.com/file/d/1FfDb7MFCPVQhwkHHr_aNQdkYA6GXoWfP/view?usp=drive_link">WARC File</a>
+              <a href="https://www.thestar.com.my/lifestyle/culture/2024/02/27/malaysian-philharmonic-orchestra-set-for-an-evening-of-keroncong-and-ghazal">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/USHERA BAWAKAN UNSUR GHAZAL DALAM LAGU RAYA KEMBALI.jpg">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>USHERA BAWAKAN UNSUR GHAZAL DALAM LAGU RAYA "KEMBALI"<br><br>
+              <strong>Archived Date:</strong> 5/12/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 7 minutes 38 seconds<br>
+              <strong>Size:</strong> 1.07 MB (17144091 bytes overall)<br>
+              <strong>Number of Files:</strong> 2 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              Local singer Ushera infuses traditional Ghazal elements into her festive Hari Raya song titled “Kembali”, promoting cultural preservation.<br><br>
+              <strong>Notes:</strong><br>
+              All archive versions complete; multimedia components and text preserved as intended.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1cZdFFiIH8S6zA6R9lrUGXaT46XgGcruN?usp=sharing">HTrack</a>
+              <a href="https://drive.google.com/file/d/1NmholRBa0zQMQ9u2IZzdSMhqyfto_Q4y/view?usp=drive_link">WARC File</a>
+              <a href="https://www.femagonline.com/2021/05/ushera-lagu-raya-kembali.html">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2025 Ghazal. All rights reserved.</div>
+    <div>Contact us: ghazalwebarchive@gmail.com</div>
+  </footer>
+</body>
+</html>

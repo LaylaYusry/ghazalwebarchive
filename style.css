@@ -1,0 +1,241 @@
+/* Font import - Cinzel dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+/* Optional: custom font ArtNuvo jika ada fail ttf */
+@font-face {
+  font-family: 'ArtNuvo';
+  src: url('fonts/ArtNuvo.ttf') format('truetype');
+}
+@media (max-width: 768px) {
+  .vision-mission-grid {
+    grid-template-columns: 1fr; /* Satu kad satu baris */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flex layout untuk sticky footer */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Cinzel', serif;
+  background-image: url('picture/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* ⭐ Biar background tak scroll dan kekal penuh */
+  color: #1a1a1a;
+}
+
+main {
+  flex: 1;
+  padding-top: 20px; /* ubah dari 100px ke 20px */
+  margin-top: 0;
+}
+
+/* HEADER / NAVIGATION */
+header {
+  background-color: #4b2c20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  height: 80px;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+/* MAIN CONTENT */
+.history-section {
+  padding: 20px 10%;
+  text-align: center;
+  margin: 0 auto; /* buang margin-top kalau tak nak gap */
+  max-width: 1000px;
+  border: 10px solid transparent;
+  border-image-repeat: round;
+  border-radius: 12px;
+}
+
+.history-section h1 {
+  font-family: 'ArtNuvo', 'UnifrakturCook', cursive;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.music-image {
+  margin: 30px auto;
+  display: block;
+  width: 380px;
+  max-width: 90%;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 10px auto 0 auto;
+  padding: 0 30px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* ABOUT US */
+.about-us {
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.about-us h1 {
+  font-family: 'ArtNuvo', 'UnifrakturCook', cursive;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.team-member {
+  width: 190px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.member-name {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dua kad sebaris */
+  gap: 40px; /* Ruang antara dua kad */
+  margin-top: 30px;
+  padding: 20px;
+  background: transparent; /* Kosongkan sebab kad nanti ada background sendiri */
+}
+
+.vision-mission-grid > div {
+  background-color: rgba(255, 255, 255, 0.95); /* Latar putih lut */
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Bayang kad */
+  padding: 25px 30px;
+  transition: transform 0.3s ease;
+}
+
+.vision-mission-grid > div:hover {
+  transform: translateY(-5px); /* Kesan hover angkat sikit */
+}
+
+.vision-mission-grid h2 {
+  font-size: 1.6em;
+  color: #4b2c20;
+  margin-bottom: 12px;
+}
+
+.vision-mission-grid p,
+.vision-mission-grid ul {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.vision-mission-grid ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.vision-mission-grid h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.vision-mission-grid p,
+.vision-mission-grid ul {
+  font-size: 1em;
+  color: #555;
+}
+
+.vision-mission-grid ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #4b2c20;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  font-size: 14px;
+}

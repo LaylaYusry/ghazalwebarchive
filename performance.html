@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Page - Ghazal</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="picture" href="picture/Ghazal logo.png">
+  <style>
+    .news-section {
+      padding: 60px 10%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 400px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #f3e7dc;
+      color: #1a1a1a;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .flip-card-back .content {
+      flex-grow: 1;
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .flip-card-back .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .flip-card-back .buttons a {
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #4b2c20;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .flip-card-back .buttons a:hover {
+      background-color: #362116;
+    }
+
+        .drive-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 20px;
+}
+
+.drive-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.classic-button {
+  background-color: #4b2c20;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  font-family: 'Cinzel', serif;
+}
+
+.classic-button:hover {
+  background-color: #362116;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.news-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+   <div class="logo">
+        <img src="picture/Ghazal logo.png" alt="Ghazal Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="history.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="performance.html">Performance</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="drive-button-wrapper">
+  <a href="https://drive.google.com/drive/folders/1v-Xlg8lI8UXV8QWTXRW2jimjMbKmTbDx?usp=sharing" target="_blank" class="classic-button">
+    📁 Conifer
+  </a>
+</div>
+  <main>
+    <section class="news-section">
+      <!-- Flip card template -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/Persembahan Seni Muzik Ghazal di Kalangan Masyarakat Johor.png" alt="News 1">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>Persembahan Seni Muzik Ghazal di Kalangan Masyarakat Johor<br><br>
+              <strong>Archived Date:</strong> 5/10/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 1 minutes 52 seconds<br>
+              <strong>Size:</strong> 1.39 MB (2633185 bytes overall)<br>
+              <strong>Number of Files:</strong> 1 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              A report on a traditional Ghazal music performance within the Johor community, focusing on cultural heritage and local engagement.<br><br>
+              <strong>Notes:</strong><br>
+               Page successfully archived in three formats; all essential content rendered accurately.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1j0f5Qu1HAXo34wlBsKCMYrGt-ZlOVUK9?usp=sharing">HTrack</a>
+              <a href="https://drive.google.com/file/d/1C51bYuTWQ1nuh7dI1XI-DsngcEm1y2BL/view?usp=drive_link">WARC File</a>
+              <a href="http://discol.umk.edu.my/id/eprint/3714/">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat this flip-card 4 more times -->
+      <!-- Dummy cards -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/Traditional Malay Music.JPG">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>Traditional Malay Music<br><br>
+              <strong>Archived Date:</strong> 5/10/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 13 seconds<br>
+              <strong>Size:</strong> 5.45 MB (1637129 bytes overall)<br>
+              <strong>Number of Files:</strong> 1 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+               An introduction to traditional Malay music, outlining instruments, singing styles, and cultural importance.<br><br>
+            
+              <strong>Notes:</strong><br>
+              Page archived successfully; all audio and visuals are captured and functional.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1I3Lq1YcQNaSoD0TSKWexfVBfVWKnqGcS?usp=sharing">HTrack</a>
+              <a href="https://drive.google.com/file/d/1yBRubehgVeSADDLGzqCqWRinwmIGrcCr/view?usp=drive_link">WARC File</a>
+              <a href="https://www.roots.gov.sg/ich-landing/ich/traditional-malay-music">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/Variasi Alunan Muzik Tradisional Malaysia.jpg">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>Variasi Alunan Muzik Tradisional Malaysia<br><br>
+              <strong>Archived Date:</strong> 5/10/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 4 minutes 28 seconds<br>
+              <strong>Size:</strong> 2.49 MB (18483226 bytes overall)<br>
+              <strong>Number of Files:</strong> 8 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              A documentary piece exploring diverse traditional Malaysian music performances and their cultural roots.<br><br>
+              <strong>Notes:</strong><br>
+               Archived fully with all media intact; playback and visuals function as intended.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/15rlajLmMeLd7JJhqo0BGSFMBftAiCDpk?usp=sharing">HTrack</a>
+              <a href="https://drive.google.com/file/d/12RTwAVHPvYuSL7C9KQWVXn7JcjTFm-TL/view?usp=drive_link">WARC File</a>
+              <a href="https://pemetaanbudaya.jkkn.gov.my/en/senibudaya/detail/864">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/PAKEJ RAMADAN DAN HARI RAYA Live Band GHAZAL Tradisi.JPG">
+          </div><div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>PAKEJ RAMADAN DAN HARI RAYA Live Band GHAZAL Tradisi<br><br>
+              <strong>Archived Date:</strong> 5/10/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 4 minutes 04 seconds<br>
+              <strong>Size:</strong> 5.90 MB (34685472 bytes overall)<br>
+              <strong>Number of Files:</strong> 4 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+               Coverage of a live Ghazal band performance during Ramadan and Hari Raya celebrations, emphasizing cultural heritage.<br><br>
+              
+              <strong>Notes:</strong><br>
+               All content successfully captured; video playback and audio sections fully functional.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1kyaZjX8jruJOtuDLRRIMUNi73qUzlXyM?usp=drive_link">HTrack</a>
+              <a href="https://drive.google.com/file/d/1K6735qt_DAaNa9bnb9QUM4uSB-IXoHyx/view?usp=drive_link">WARC File</a>
+              <a href="https://anjungtradisi.blogspot.com/2024/08/ghazal-seni-persembahan-klasik-untuk.html">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="picture/FESTIVAL GHAZAL MALAYSIA.png">
+          </div>
+          <div class="flip-card-back">
+            <div class="content">
+              <strong>Title:</strong>FESTIVAL GHAZAL MALAYSIA<br><br>
+              <strong>Archived Date:</strong> 5/10/2025<br>
+              <strong>Archive Success:</strong> Yes<br>
+              <strong>Duration:</strong> 35 seconds<br>
+              <strong>Size:</strong> 2.70 MB (1518642 bytes overall)<br>
+              <strong>Number of Files:</strong> 1 Files<br>
+              <strong>Tools Used:</strong> HTTrack, Conifer, Live Site<br><br>
+              <strong>Description:</strong><br>
+              A feature on the Malaysian Ghazal Festival, illustrating performances, cultural elements, and public engagement.<br><br>
+              
+              <strong>Notes:</strong><br>
+              Archived completely; visuals and event summary are intact and accessible.
+            </div>
+            <div class="buttons">
+              <a href="https://drive.google.com/drive/folders/1PfREIPlr0a-68tz2ct0f9ITuZJjhS057?usp=drive_link">HTrack</a>
+              <a href="https://drive.google.com/file/d/1S2-wXA0m2jONFY3yjXnDjie4DDvaOInU/view?usp=drive_link">WARC File</a>
+              <a href="https://anyflip.com/ctebz/fgvi/basic">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2025 Ghazal. All rights reserved.</div>
+    <div>Contact us: ghazalwebarchive@gmail.com</div>
+  </footer>
+</body>
+</html>
