@@ -100,7 +100,7 @@ nav ul li a:hover::after {
 }
 
 /* MAIN CONTENT */
-.history-section {
+.index-section {
   padding: 20px 10%;
   text-align: center;
   margin: 0 auto; /* buang margin-top kalau tak nak gap */
@@ -110,7 +110,7 @@ nav ul li a:hover::after {
   border-radius: 12px;
 }
 
-.history-section h1 {
+.index-section h1 {
   font-family: 'ArtNuvo', 'UnifrakturCook', cursive;
   font-size: 40px;
   text-align: center;
